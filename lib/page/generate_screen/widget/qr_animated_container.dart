@@ -30,13 +30,13 @@ class QrAnimatedContainerState extends State<QrAnimatedContainer> {
       duration: widget.duration,
       width: visible ? widget.width : widget.width,
       child: Column(
-        children: [
-          QrImage(
+        children: <Widget>[
+          QrImageView(
             data: widget.qrData,
             version: QrVersions.auto,
             gapless: true,
-            embeddedImageStyle: QrEmbeddedImageStyle(
-              size: const Size(800, 800),
+            embeddedImageStyle: const QrEmbeddedImageStyle(
+              size: Size(800, 800),
             ),
           ),
           Text(widget.qrTitle),
